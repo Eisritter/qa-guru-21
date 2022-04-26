@@ -18,5 +18,4 @@ public interface CredentialsConfig extends Config {
 
     @Key("url")
     String url();
-
 }
