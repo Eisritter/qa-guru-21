@@ -20,7 +20,7 @@ public class TestBase {
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
-        switch (System.getProperty("device")) {
+        switch (System.getProperty("deviceHost")) {
             case "real":
             case "emulator":
                 Configuration.browser = EmulatorMobileDriver.class.getName();
