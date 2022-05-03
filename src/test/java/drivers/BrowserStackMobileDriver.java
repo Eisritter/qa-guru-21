@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BrowserstackMobileDriver  implements WebDriverProvider {
+public class BrowserStackMobileDriver implements WebDriverProvider {
 
     public static URL getBrowserstackUrl() {
         try {

@@ -31,9 +31,6 @@ public class AndroidSelenideTests extends TestBase {
                     .shouldHave(Condition.text("Send anonymous data"));
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
         });
-//        step("Verify Open Home screen", () ->
-//                $(AppiumBy.id("org.wikipedia.alpha:id/main_toolbar_wordmark"))
-//                        .shouldBe(Condition.visible));
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))

@@ -3,7 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 
-import drivers.BrowserstackMobileDriver;
+import drivers.BrowserStackMobileDriver;
 import drivers.EmulatorMobileDriver;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -26,7 +26,7 @@ public class TestBase {
                 Configuration.browser = EmulatorMobileDriver.class.getName();
                 break;
             case "browserstack":
-                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                Configuration.browser = BrowserStackMobileDriver.class.getName();
                 break;
             default:
                 throw new IllegalArgumentException("Something happen");

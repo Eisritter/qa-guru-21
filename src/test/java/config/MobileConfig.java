@@ -13,4 +13,12 @@ public interface MobileConfig extends Config {
 
     @Key("appPath")
     String appPath();
+
+    @Key("deviceName")
+    @DefaultValue("Pixel_4_API_30")
+    String deviceName();
+
+    @Key("platformVersion")
+    @DefaultValue("11.0")
+    String platformVersion();
 }
