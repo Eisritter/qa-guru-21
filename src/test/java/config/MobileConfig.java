@@ -5,12 +5,6 @@ import org.aeonbits.owner.Config;
 @Config.Sources({"classpath:emulator.properties"})
 public interface MobileConfig extends Config {
 
-    @Key("appPackage")
-    String appPackage();
-
-    @Key("appActivity")
-    String appActivity();
-
     @Key("serverUrl")
     String serverUrl();
 

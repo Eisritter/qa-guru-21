@@ -1,4 +1,4 @@
-package tests.emulator;
+package tests;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;

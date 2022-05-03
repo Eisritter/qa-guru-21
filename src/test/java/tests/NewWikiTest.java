@@ -1,4 +1,4 @@
-package tests.browserstack;
+package tests;
 
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;

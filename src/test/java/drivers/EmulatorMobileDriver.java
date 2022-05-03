@@ -39,15 +39,15 @@ public class EmulatorMobileDriver implements WebDriverProvider {
 
     public static URL getAppiumServerUrl() {
         try {
-            return new URL(Credentials.configBrowserstack.url());
+            return new URL(Credentials.configMobile.serverUrl());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private File getApp() {
-        String appPath = "src/test/resources/apk/app-alpha-universal-release.apk";
-        String appUrl = Credentials.configBrowserstack.app();
+        String appPath = Credentials.configMobile.appPath();
+        String appUrl = Credentials.configMobile.appUrl();
 
         File app = new File(appPath);
         if (!app.exists()) {
