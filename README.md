@@ -42,7 +42,7 @@
 
 Локальный запуск на эмуляторе:
 ```
-gradle clean test DdeviceHost=emulation real 
+gradle clean test DdeviceHost=emulation 
 ```
 Локальный запуск на реальном устройстве:
 ```
