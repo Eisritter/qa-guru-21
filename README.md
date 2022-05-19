@@ -26,11 +26,7 @@
 
 ## :boom: Реализованные проверки
 
-- На странице скачивания для Windows есть кнопка 'Скачать бесплатно'
-- У заголовка вкладки верный текст
-- Страница тарифов TrueConf Online открывается
-- Кнопка 'Войти в конференцию' кликабельна
-- На странице блога есть ссылка на вебинары
+- Проверка стартовых экранов и поиска в приложении
 
 ## <img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в Jenkins
 <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-eisritter-unit13-homework/">Jenkins job</a>
@@ -38,32 +34,23 @@
 <a href="https://jenkins.autotests.cloud/job/C11-eisritter-unit13-homework/"><img src="image/screenshots/jenkins-dashboard.png" alt="Jenkins"/></a>
 </p>
 
-### :maple_leaf: Параметры сборки в Jenkins:
+### :maple_leaf: Особенности сборки в Jenkins:
 
-- browser (браузер, по умолчанию chrome)
-- browserSize (размер окна браузера, по умолчанию 1920x1080)
-- remoteDriverUrl (логин, пароль и адрес удаленного сервера selenoid или grid)
-- threads (количество потоков)
-- AlureNotificationVersion (версия AllureNotification)
+Сборку можно запустить как через сервис Browserstack так и через Appium и с помощью реального подключенного телефона.
 
 ## :computer: Запуск тестов из терминала
 
-Локальный запуск:
+Локальный запуск на эмуляторе:
 ```
-gradle clean test
+gradle clean test DdeviceHost=emulation real 
 ```
-
-Удаленный запуск:
+Локальный запуск на реальном устройстве:
 ```
-clean
-test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
--DremoteDriverUrl=https://${USER}:${PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
+gradle clean test DdeviceHost=real 
+```
+Запуск в Browserstack:
+```
+gradle clean test DdeviceHost=browserstack
 ```
 ## <img src="image/logo/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/C11-eisritter-unit13-homework/allure">Allure report</a>
 
