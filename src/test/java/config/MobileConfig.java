@@ -2,14 +2,8 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:emulator.properties"})
+@Config.Sources({"classpath:config/emulator.properties"})
 public interface MobileConfig extends Config {
-
-    @Key("appPackage")
-    String appPackage();
-
-    @Key("appActivity")
-    String appActivity();
 
     @Key("serverUrl")
     String serverUrl();
@@ -19,4 +13,12 @@ public interface MobileConfig extends Config {
 
     @Key("appPath")
     String appPath();
+
+    @Key("deviceName")
+    @DefaultValue("Pixel_4_API_30")
+    String deviceName();
+
+    @Key("platformVersion")
+    @DefaultValue("11.0")
+    String platformVersion();
 }

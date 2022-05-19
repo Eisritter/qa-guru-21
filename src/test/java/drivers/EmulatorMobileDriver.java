@@ -16,6 +16,7 @@ import java.net.URL;
 
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
+
 public class EmulatorMobileDriver implements WebDriverProvider {
 
     @Override
@@ -26,8 +27,8 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
-        options.setDeviceName("Pixel_4_API_30");
-        options.setPlatformVersion("11.0");
+        options.setDeviceName(Credentials.configMobile.deviceName());
+        options.setPlatformVersion(Credentials.configMobile.platformVersion());
         options.setApp(app.getAbsolutePath());
         options.setLocale("en");
         options.setLanguage("en");
@@ -39,15 +40,15 @@ public class EmulatorMobileDriver implements WebDriverProvider {
 
     public static URL getAppiumServerUrl() {
         try {
-            return new URL(Credentials.configBrowserstack.url());
+            return new URL(Credentials.configMobile.serverUrl());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private File getApp() {
-        String appPath = "src/test/resources/apk/app-alpha-universal-release.apk";
-        String appUrl = Credentials.configBrowserstack.app();
+        String appPath = Credentials.configMobile.appPath();
+        String appUrl = Credentials.configMobile.appUrl();
 
         File app = new File(appPath);
         if (!app.exists()) {
