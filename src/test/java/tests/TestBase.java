@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 
+import config.Credentials;
 import drivers.BrowserStackMobileDriver;
 import drivers.EmulatorMobileDriver;
 import helpers.Attach;
@@ -14,6 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static io.qameta.allure.Allure.step;
+import static io.restassured.RestAssured.sessionId;
 
 public class TestBase {
 
@@ -45,5 +47,7 @@ public class TestBase {
         Attach.pageSource();
 
         step("Close driver", Selenide::closeWebDriver);
-    }
+
+        Attach.video(sessionId);
+}
 }
