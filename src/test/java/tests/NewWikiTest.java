@@ -21,8 +21,8 @@ public class NewWikiTest extends TestBase {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Selenium"); });
 
-        step("Verify content found", () ->
-                $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
+//        step("Verify content found", () ->
+//                $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
 
     }
 

@@ -36,8 +36,8 @@ public class AndroidSelenideTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))
                     .setValue("Selenide");
         });
-        step("Verify content found", () ->
-                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(sizeGreaterThan(0)));
+//        step("Verify content found", () ->
+//                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
+//                        .shouldHave(sizeGreaterThan(0)));
     }
 }
