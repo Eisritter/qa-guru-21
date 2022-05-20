@@ -20,7 +20,6 @@
 <img width="6%" title="JUnit5" src="image/logo/JUnit5.svg">
 <img width="6%" title="GitHub" src="image/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="image/logo/Jenkins.svg">
-<img width="6%" title="Telegram" src="image/logo/Telegram.svg">
 </p>
 
 ## :boom: Реализованные проверки
