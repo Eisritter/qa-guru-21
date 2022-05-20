@@ -16,7 +16,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.getSessionId;
 import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.sessionId;
 
 public class TestBase {
 
