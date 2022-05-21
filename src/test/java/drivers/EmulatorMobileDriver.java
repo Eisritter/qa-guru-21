@@ -54,8 +54,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         if (!app.exists()) {
             try (InputStream in = new URL(appUrl).openStream()) {
                 copyInputStreamToFile(in, app);
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 throw new AssertionError("Failed to download apk", e);
             }
         }

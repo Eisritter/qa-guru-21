@@ -3,7 +3,6 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 
-import config.Credentials;
 import drivers.BrowserStackMobileDriver;
 import drivers.EmulatorMobileDriver;
 import helpers.Attach;
@@ -48,5 +47,5 @@ public class TestBase {
         Attach.pageSource();
         step("Close driver", Selenide::closeWebDriver);
         Attach.video(sessionId);
-}
+    }
 }
