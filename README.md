@@ -7,6 +7,7 @@
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Запуск из терминала](#computer-Запуск-тестов-из-терминала)
 - [Отчет в Allure report](#-отчет-в-allure-report)
+- [Отчет в Telegram](#-уведомление-в-telegram-при-помощи-бота)
 - [Видео пример прохождения тестов](#-видео-пример-прохождения-теста)
 
 ## :computer: Технологии и инструменты
@@ -64,6 +65,12 @@ gradle clean test DdeviceHost=browserstack
 
 <p align="center">
 <img title="Allure Tests" src="image/screenshots/allure-test-page.png">
+</p>
+
+## <img src="image/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+
+<p align="center">
+<img title="Telegram bot" src="image/screenshots/telegram_bot.png" >
 </p>
 
 ## <img src="image/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Видео пример прохождения теста
