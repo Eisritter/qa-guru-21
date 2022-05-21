@@ -20,7 +20,7 @@
 <img width="6%" title="JUnit5" src="image/logo/JUnit5.svg">
 <img width="6%" title="GitHub" src="image/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="image/logo/Jenkins.svg">
-<img width="6%" title="Appium" src="image/logo/Appium.png">
+<img width="6%" title="Appium" src="image/logo/Appium.svg">
 <img width="6%" title="Browserstack" src="image/logo/Browserstack.svg">
 </p>
 
@@ -29,14 +29,14 @@
 - Проверка стартовых экранов и поиска в приложении
 
 ## <img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в Jenkins
-<a target="_blank" href="https://jenkins.autotests.cloud/job/C11-eisritter-unit13-homework/">Jenkins job</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C11-eisritter-mobile/">Jenkins job</a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/C11-eisritter-unit13-homework/"><img src="image/screenshots/jenkins-dashboard.png" alt="Jenkins"/></a>
 </p>
 
 ### :maple_leaf: Особенности сборки в Jenkins:
 
-Сборку можно запустить как через сервис Browserstack так и через Appium и с помощью реального подключенного телефона.
+- Сборку можно запустить как через сервис Browserstack так и через Appium и с помощью реального подключенного телефона.
 
 ## :computer: Запуск тестов из терминала
 
